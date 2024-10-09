@@ -1,0 +1,197 @@
+.investment-forecaster {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #d9dee2;
+  /* background-color: #34afce; */
+  margin-top: 102px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 10px;
+}
+
+.logo {
+  width: 250px;
+}
+
+h2 {
+  color: #0e0d0d;
+}
+
+.input-chart-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  gap: 22px; /* Adjust gap between input and chart */
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+/* .input-section {
+  flex: 1;
+  min-width: 300px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+} */
+.input-section mat-card {
+  max-width: 450px; 
+  width: 100%; 
+}
+
+.input-section h2 {
+  color: #050505;
+}
+
+.chart-section {
+  flex: 1;
+  min-width: 300px; /* Ensure chart section doesn't get too small */
+  padding: 20px;
+  margin-top: 20px;
+  margin-top: -17px;
+}
+
+.title{
+  font-weight: bold;
+  /* font-size: large; */
+  font-size: 1em;
+}
+
+.footer-note {
+  font-size: 12px;
+  margin-top: 20px;
+  padding-top: 10px;
+}
+
+.investment-forecaster .form-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; /* Allow the fields to wrap within the container */
+  gap: 20px; /* Optional: Add a gap between form fields */
+}
+
+.investment-forecaster .form-row mat-form-field {
+  flex: 1 1 calc(50% - 20px); /* Make each form field take 50% of the width with a small gap */
+  min-width: 200px; /* Ensure a minimum width for smaller screens */
+}
+
+/* Adjust for smaller screens */
+@media screen and (max-width: 768px) {
+  .investment-forecaster .form-row mat-form-field {
+    flex: 1 1 100%; /* Stack fields vertically on smaller screens */
+  }
+}
+
+.full-width {
+  width: 100%;
+}
+
+.header img.logo {
+  max-width: 150px;
+  height: auto;
+}
+
+.footer-note p {
+  font-size: 12px;
+  color: #080808;
+  text-align: left;
+  line-height: 1.5;
+}
+
+.underline {
+  text-decoration: underline;
+}
+.button-container {
+  display: flex;
+  justify-content: flex-end; /* Aligns button to the right */
+  margin-bottom: 20px; /* Space below the button */
+  margin-right: 20px;
+}
+
+.investment-forecaster {
+  position: relative; /* Ensure relative positioning for absolute child elements */
+}
+
+
+/* Media Query for small screens (like mobile) */
+@media (max-width: 768px) {
+  .form-row {
+    flex-direction: column; /* Switch to column on smaller screens */
+  }
+}
+.lifetime2{
+  margin-top: 25px;
+}
+.lifetime h2 {
+  margin: 0;
+  /* text-align: right; */
+  margin-top: 10px;
+  color: rgb(8, 8, 8);
+}
+
+.lifetime h1 {
+  margin: 0;
+  margin-top: 10px;
+  color: rgb(8, 8, 8);
+}
+
+.small-text {
+  font-size: 0.8em;
+  color: rgb(255, 255, 255);
+  font-style: italic;
+}
+
+.large-icon {
+  font-size: 64px;
+  width: 64px; 
+  height: 64px; 
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 64px;
+  min-height: 64px;
+}
+
+/* Responsive design for tablets and smaller devices */
+@media (max-width: 768px) {
+  .input-chart-container {
+    flex-direction: column; /* Stack input and chart sections vertically */
+  }
+
+  .header {
+    flex-direction: column; /* Stack logos vertically on smaller screens */
+    text-align: center;
+  }
+
+  .chart-section,
+  .input-section {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 480px) {
+  h2 {
+    font-size: 1.5em; /* Reduce heading size on mobile */
+  }
+
+  .small-text {
+    font-size: 0.7em; /* Smaller text for mobile */
+  }
+
+  .form-row {
+    gap: 12px; /* Reduce gap between form fields */
+  }
+
+  .footer-note {
+    font-size: 10px; /* Smaller footer text for mobile */
+  }
+}

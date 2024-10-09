@@ -1,0 +1,50 @@
+.bg-shape-1 {
+    position: absolute;
+    clip-path: polygon(100% 0, 60% 0, 100% 85%);
+    width: 100vw;
+    height: 100vh;
+    background: var(--furnley-aqua);
+}
+
+.bg-shape-2 {
+    position: absolute;
+    clip-path: polygon(0 0, 85% 0, 50% 100%, 0% 100%);
+    width: 100vw;
+    height: 100vh;
+    background: #1B3443;
+}
+
+.bg-logo {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    width: 12.5vw;
+
+    > img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+@media (min-width: 320px) and (max-width: 640px) {
+
+    .bg-shape-2 {
+        clip-path: polygon(0 0, 65% 0, 40% 100%, 0% 100%) !important;
+    }
+
+    .bg-logo {
+        width: 22.5vw !important;
+    }    
+}
+
+@media (min-width: 641px) and (max-width: 960px) {
+
+    .bg-shape-2 {
+        clip-path: polygon(0 0, 65% 0, 40% 100%, 0% 100%) !important;
+    }
+
+    .bg-logo {
+        width: 22.5vw !important;
+    }
+}

@@ -1,0 +1,85 @@
+<!-- <div class="signin">
+  <app-authentication-background></app-authentication-background>
+  <form>
+    <mat-card class="signin-card">
+      <mat-card-header>
+        <mat-card-title class="signin-card-title">Log in</mat-card-title>
+      </mat-card-header>
+      <mat-card-content class="signin-card-content">
+        <div class="signin-card-content-form">
+          <mat-form-field class="input-full-width">
+            <mat-label>Email</mat-label>
+            <input
+              matInput
+              type="email"
+              name="email"
+              required
+              email
+            />
+          </mat-form-field>
+          <mat-form-field class="input-full-width">
+            <mat-label>Password</mat-label>
+            <input
+              matInput
+              type="password"
+              name="password"
+              required
+            />
+          </mat-form-field>
+          <div class="validation-error">
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions class="signin-card-actions">
+        <button mat-button type="submit" class="furnley-action-auth-confirm">
+          Log in
+        </button>
+      </mat-card-actions>
+      <div class="forgot-password">
+        <a>Forgot password?</a>
+      </div>
+    </mat-card>
+  </form>
+</div> -->
+
+
+
+<div class="login-container">
+    <mat-card class="login-card">
+      <img class="logo" mat-card-image src="assets/images/1000051980.jpg" alt="Furnley House Logo">
+      <mat-card-title class="sign">Sign in to your account</mat-card-title>
+      <mat-card-content>
+        <form>
+          <div class="form-group">
+            <div class="form-header">Email</div>
+            <mat-form-field class="emailId" appearance="outline">
+              <input matInput type="email" required>
+            </mat-form-field>
+          </div>
+  
+          <div class="form-group">
+            <div class="form-header">Password</div>
+            <mat-form-field class="passwordId" appearance="outline">
+              <input matInput type="password" required>
+            </mat-form-field>
+          </div>
+  
+          <div class="remember-forgot-container">
+            <mat-checkbox>Remember me</mat-checkbox>
+            <a class="forgot-password" (click)="navigateToForgotPassword()">Forgot Password?</a>
+          </div>
+  
+          <div class="sign-in-button-container">
+            <button mat-raised-button color="primary" (click)="navigateToHome()" type="submit">Sign in</button>
+          </div>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  
+  
+  
+  
+  
+  
+ 
