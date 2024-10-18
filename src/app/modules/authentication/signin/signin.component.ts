@@ -9,6 +9,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./signin.component.css']
 })
 export class SigninComponent {
+  email: string = '';
+  password: string = '';  
   constructor(private router: Router) { }
 
   navigateToForgotPassword() {
@@ -17,9 +19,19 @@ export class SigninComponent {
   navigateToDashboard() {
     this.router.navigate(['/dashboard']);
   }
+  // navigateToHome() {
+  //   this.router.navigate(['/dashboard']);
+  // }
   navigateToHome() {
-    console.log('Navigating to dashboard...');
-    this.router.navigate(['/dashboard']);
+    if (this.email && this.password) {
+      if (this.email.trim() === 'srinath' && this.password.trim() === 'password123') {
+        localStorage.setItem('isAuthenticated', 'true');
+        this.router.navigate(['/dashboard']);
+      } else {
+        alert('Invalid credentials');
+      }
+    } else {
+      alert('Please enter email and password');
+    }
   }
-
 }
