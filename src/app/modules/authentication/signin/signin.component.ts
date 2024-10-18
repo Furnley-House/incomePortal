@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -9,9 +10,15 @@ import { Router } from '@angular/router';
   styleUrls: ['./signin.component.css']
 })
 export class SigninComponent {
+  signInForm: FormGroup;
   email: string = '';
   password: string = '';  
-  constructor(private router: Router) { }
+  constructor(private router: Router, private sf:FormBuilder) { 
+    this.signInForm=this.sf.group({
+      email:['',Validators.required],
+      password : ['',Validators.required]
+    })
+  }
 
   navigateToForgotPassword() {
     this.router.navigate(['/forgot-password']);
@@ -23,8 +30,15 @@ export class SigninComponent {
   //   this.router.navigate(['/dashboard']);
   // }
   navigateToHome() {
+    if(this.signInForm.valid){
+      console.log(this.signInForm.value);
+    }
+    else {
+      // Mark all controls as touched to show validation messages
+      this.signInForm.markAllAsTouched();
+    }
     if (this.email && this.password) {
-      if (this.email.trim() === 'srinath' && this.password.trim() === 'password123') {
+      if (this.email.trim() === 'adil' && this.password.trim() === '123') {
         localStorage.setItem('isAuthenticated', 'true');
         this.router.navigate(['/dashboard']);
       } else {

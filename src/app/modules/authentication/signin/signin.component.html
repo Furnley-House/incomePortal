@@ -3,18 +3,23 @@
     <img class="logo" mat-card-image src="assets/images/FH_Logo.png" alt="Furnley House Logo">
     <mat-card-title class="sign">Sign in to your account</mat-card-title>
     <mat-card-content>
-      <form (ngSubmit)="navigateToHome()">
+      <form [formGroup]="signInForm" (ngSubmit)="navigateToHome()">
         <div class="form-group">
           <div class="form-header">Email</div>
           <mat-form-field class="emailId" appearance="outline">
-            <input matInput [(ngModel)]="email" name="email" type="email" required>
+            <input matInput formControlName="email" [(ngModel)]="email" name="email" type="email" required>
+            <mat-error *ngIf="signInForm.get('email')?.hasError('required') && signInForm.get('email')?.touched">
+              Email ID is required.
+            </mat-error>
           </mat-form-field>
         </div>
 
         <div class="form-group">
           <div class="form-header">Password</div>
           <mat-form-field class="passwordId" appearance="outline">
-            <input matInput [(ngModel)]="password" name="password" type="password" required>
+            <input matInput formControlName="password" [(ngModel)]="password" name="password" type="password" required>
+            <mat-error *ngIf="signInForm.get('password')?.hasError('required') && signInForm.get('password')?.touched">
+              Password is required.</mat-error>
           </mat-form-field>
         </div>
 

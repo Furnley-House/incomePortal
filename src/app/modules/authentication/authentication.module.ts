@@ -9,6 +9,7 @@ import { MatCardModule } from "@angular/material/card";
 import { MatCheckboxModule } from "@angular/material/checkbox";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
+import { RouterModule } from '@angular/router';
 
 
 
@@ -26,7 +27,8 @@ import { MatInputModule } from "@angular/material/input";
     MatInputModule,
     MatCardModule,
     MatButtonModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    RouterModule
   ],
   exports:[
     SigninComponent,
